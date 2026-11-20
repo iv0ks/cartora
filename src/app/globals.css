@@ -1,0 +1,72 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+/*
+  cartora — "market stall" identity: warm paper, forest green ink, tomato and
+  mustard accents, thick outlines and hard offset shadows. Colours are exposed as
+  shadcn/ui tokens so the components below stay vanilla.
+*/
+:root {
+  --radius: 0.5rem;
+  --background: #f6efe0;
+  --foreground: #1c2b22;
+  --card: #fffaf0;
+  --card-foreground: #1c2b22;
+  --popover: #fffaf0;
+  --popover-foreground: #1c2b22;
+  --primary: #1f4d36;
+  --primary-foreground: #fffaf0;
+  --secondary: #f2b134;
+  --secondary-foreground: #1c2b22;
+  --muted: #eadfc6;
+  --muted-foreground: #5d6b5f;
+  --accent: #e4572e;
+  --accent-foreground: #fffaf0;
+  --destructive: #b3261e;
+  --border: #1c2b22;
+  --input: #1c2b22;
+  --ring: #e4572e;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
+  --font-display: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --shadow-stall: 4px 4px 0 0 var(--border);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    background-image: radial-gradient(rgba(28, 43, 34, 0.08) 1px, transparent 1px);
+    background-size: 18px 18px;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-display tracking-tight;
+  }
+}
